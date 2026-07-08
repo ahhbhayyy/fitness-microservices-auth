@@ -1,0 +1,195 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.5)
+
+2026-05-30T00:08:00.414+05:30  INFO 13812 --- [activityservice] [           main] c.f.a.ActivityserviceApplication         : Starting ActivityserviceApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 13812 (C:\Java\fitness-project\activityservice\target\activityservice-0.0.1-SNAPSHOT.jar started by abc in C:\Java\fitness-project)
+2026-05-30T00:08:00.679+05:30  INFO 13812 --- [activityservice] [           main] c.f.a.ActivityserviceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-05-30T00:08:26.437+05:30  INFO 13812 --- [activityservice] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-30T00:08:29.634+05:30  INFO 13812 --- [activityservice] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3159 ms. Found 1 MongoDB repository interface.
+2026-05-30T00:08:36.499+05:30  INFO 13812 --- [activityservice] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=57309b51-8e07-35c2-99f1-4da7437b4c49
+2026-05-30T00:08:46.863+05:30  INFO 13812 --- [activityservice] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-05-30T00:08:47.450+05:30  INFO 13812 --- [activityservice] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30T00:08:47.454+05:30  INFO 13812 --- [activityservice] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-05-30T00:08:48.557+05:30  INFO 13812 --- [activityservice] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 45202 ms
+2026-05-30T00:09:03.920+05:30  INFO 13812 --- [activityservice] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.4"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@27e199ce, com.mongodb.Jep395RecordCodecProvider@1c3b6963, com.mongodb.KotlinCodecProvider@7364f68, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-30T00:09:05.668+05:30  INFO 13812 --- [activityservice] [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=27, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1422195700, minRoundTripTimeNanos=0}
+USING USERSERVICE BASE URL
+2026-05-30T00:09:48.062+05:30  INFO 13812 --- [activityservice] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-05-30T00:09:49.045+05:30  WARN 13812 --- [activityservice] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-30T00:09:49.288+05:30  INFO 13812 --- [activityservice] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-30T00:09:49.731+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-30T00:09:50.290+05:30  INFO 13812 --- [activityservice] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:09:50.841+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-30T00:09:51.257+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-30T00:09:52.007+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-30T00:09:52.444+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-30T00:09:52.917+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-30T00:09:53.003+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-30T00:09:53.037+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-30T00:09:58.816+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-30T00:09:58.823+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-30T00:09:58.832+05:30  INFO 13812 --- [activityservice] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-30T00:09:58.837+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1780079998836 with initial instances count: 3
+2026-05-30T00:09:58.873+05:30  INFO 13812 --- [activityservice] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ACTIVITYSERVICE with eureka with status UP
+2026-05-30T00:09:58.875+05:30  INFO 13812 --- [activityservice] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1780079998875, current=UP, previous=STARTING]
+2026-05-30T00:09:59.138+05:30  INFO 13812 --- [activityservice] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACTIVITYSERVICE/ayo.mshome.net:activityservice:8082: registering service...
+2026-05-30T00:09:59.185+05:30  INFO 13812 --- [activityservice] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-05-30T00:09:59.218+05:30  INFO 13812 --- [activityservice] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-05-30T00:10:01.276+05:30  INFO 13812 --- [activityservice] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACTIVITYSERVICE/ayo.mshome.net:activityservice:8082 - registration status: 204
+2026-05-30T00:10:03.284+05:30  INFO 13812 --- [activityservice] [           main] c.f.a.ActivityserviceApplication         : Started ActivityserviceApplication in 144.618 seconds (process running for 173.521)
+2026-05-30T00:12:03.795+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30T00:12:03.800+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-30T00:12:03.834+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2026-05-30T00:12:05.801+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] c.f.a.service.UserValidationService      : Calling user service for 021b4ccd-d53e-41ce-bc1a-2ed1681effdf
+2026-05-30T00:12:13.906+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.a.kafka.common.config.AbstractConfig   : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = activityservice-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transaction.two.phase.commit.enable = false
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-05-30T00:12:14.139+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-05-30T00:12:15.223+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=activityservice-producer-1] Instantiated an idempotent producer.
+2026-05-30T00:12:15.684+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-05-30T00:12:15.755+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-05-30T00:12:15.773+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1780080135658
+2026-05-30T00:12:21.569+05:30  INFO 13812 --- [activityservice] [vice-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=activityservice-producer-1] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2026-05-30T00:12:23.065+05:30  INFO 13812 --- [activityservice] [vice-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=activityservice-producer-1] ProducerId set to 4 with epoch 0
+2026-05-30T00:12:26.173+05:30  INFO 13812 --- [activityservice] [vice-producer-1] c.f.a.service.ActivityService            : Published activity event: topic=activity-events, partition=0, offset=5, activityId=6a19de05072f82856ff32e0a
+2026-05-30T00:14:53.214+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:19:53.278+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:24:53.410+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:27:10.717+05:30  INFO 13812 --- [activityservice] [nio-8082-exec-5] c.f.a.service.UserValidationService      : Calling user service for 021b4ccd-d53e-41ce-bc1a-2ed1681effdf
+2026-05-30T00:27:42.638+05:30  WARN 13812 --- [activityservice] [vice-producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=activityservice-producer-1] Got error produce response with correlation id 11 on topic-partition activity-events-0, retrying (2147483646 attempts left). Error: NOT_LEADER_OR_FOLLOWER
+2026-05-30T00:27:42.689+05:30  WARN 13812 --- [activityservice] [vice-producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=activityservice-producer-1] Received invalid metadata error in produce request on partition activity-events-0 due to org.apache.kafka.common.errors.NotLeaderOrFollowerException: For requests intended only for the leader, this error indicates that the broker is not the current leader. For requests intended for any replica, this error indicates that the broker is not a replica of the topic partition. Going to request metadata update now
+2026-05-30T00:27:42.946+05:30  WARN 13812 --- [activityservice] [vice-producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=activityservice-producer-1] Got error produce response with correlation id 13 on topic-partition activity-events-0, retrying (2147483645 attempts left). Error: NOT_LEADER_OR_FOLLOWER
+2026-05-30T00:27:42.947+05:30  WARN 13812 --- [activityservice] [vice-producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=activityservice-producer-1] Received invalid metadata error in produce request on partition activity-events-0 due to org.apache.kafka.common.errors.NotLeaderOrFollowerException: For requests intended only for the leader, this error indicates that the broker is not the current leader. For requests intended for any replica, this error indicates that the broker is not a replica of the topic partition. Going to request metadata update now
+2026-05-30T00:27:42.992+05:30  WARN 13812 --- [activityservice] [vice-producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=activityservice-producer-1] Got error produce response with correlation id 14 on topic-partition activity-events-0, retrying (2147483644 attempts left). Error: NOT_LEADER_OR_FOLLOWER
+2026-05-30T00:27:42.996+05:30  WARN 13812 --- [activityservice] [vice-producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=activityservice-producer-1] Received invalid metadata error in produce request on partition activity-events-0 due to org.apache.kafka.common.errors.NotLeaderOrFollowerException: For requests intended only for the leader, this error indicates that the broker is not the current leader. For requests intended for any replica, this error indicates that the broker is not a replica of the topic partition. Going to request metadata update now
+2026-05-30T00:27:43.489+05:30  WARN 13812 --- [activityservice] [vice-producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=activityservice-producer-1] Got error produce response with correlation id 16 on topic-partition activity-events-0, retrying (2147483643 attempts left). Error: NOT_LEADER_OR_FOLLOWER
+2026-05-30T00:27:43.492+05:30  WARN 13812 --- [activityservice] [vice-producer-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=activityservice-producer-1] Received invalid metadata error in produce request on partition activity-events-0 due to org.apache.kafka.common.errors.NotLeaderOrFollowerException: For requests intended only for the leader, this error indicates that the broker is not the current leader. For requests intended for any replica, this error indicates that the broker is not a replica of the topic partition. Going to request metadata update now
+2026-05-30T00:27:44.720+05:30  INFO 13812 --- [activityservice] [vice-producer-1] c.f.a.service.ActivityService            : Published activity event: topic=activity-events, partition=0, offset=6, activityId=6a19e192072f82856ff32e0b
+2026-05-30T00:29:53.528+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:34:53.567+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:37:55.817+05:30  INFO 13812 --- [activityservice] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACTIVITYSERVICE/ayo.mshome.net:activityservice:8082 - Re-registering apps/ACTIVITYSERVICE
+2026-05-30T00:37:55.934+05:30  INFO 13812 --- [activityservice] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACTIVITYSERVICE/ayo.mshome.net:activityservice:8082: registering service...
+2026-05-30T00:37:56.462+05:30  INFO 13812 --- [activityservice] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ACTIVITYSERVICE/ayo.mshome.net:activityservice:8082 - registration status: 204
+2026-05-30T00:39:53.701+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:44:54.012+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:49:54.063+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:54:54.103+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T00:59:54.190+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-30T01:04:54.508+05:30  INFO 13812 --- [activityservice] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
