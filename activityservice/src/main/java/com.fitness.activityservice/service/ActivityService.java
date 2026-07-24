@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 @RequiredArgsConstructor
 @Service
 @Slf4j
@@ -18,6 +20,25 @@ public class ActivityService {
     private final KafkaTemplate<String,Activity> kafkaTemplate;
     @Value("${kafka.topic.name}")
     private String topicName;
+
+    public List<ActivityResponse> getUserActivities(String userId) {
+        return activityRepository.findByUserIdOrderByCreatedAtDesc(userId)
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
+
+    public ActivityResponse getActivityById(String activityId, String userId) {
+        Activity activity = activityRepository.findById(activityId)
+                .orElseThrow(() -> new RuntimeException("activity not found: " + activityId));
+
+        if (!activity.getUserId().equals(userId)) {
+            throw new RuntimeException("activity does not belong to user: " + userId);
+        }
+
+        return mapToResponse(activity);
+    }
+
     public ActivityResponse trackActivity(ActivityRequest request) {
 
         boolean isValidUser=userValidationService.validateUser(request.getUserId());

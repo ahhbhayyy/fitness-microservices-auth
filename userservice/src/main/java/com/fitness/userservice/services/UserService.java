@@ -13,32 +13,47 @@ import org.springframework.stereotype.Service;
 public class UserService {
     private final UserRepository userRepository;
     public UserResponse register(RegisterRequest request) {
+        if (request.getKeycloakId() != null && userRepository.existsByKeycloakId(request.getKeycloakId())) {
+            return mapToResponse(userRepository.findByKeycloakId(request.getKeycloakId()));
+        }
+
         if(userRepository.existsByEmail(request.getEmail())){
-            throw new RuntimeException("email already exist");
+            User existingUser= userRepository.findByEmail(request.getEmail());
+            if (existingUser.getKeycloakId() == null && request.getKeycloakId() != null) {
+                existingUser.setKeycloakId(request.getKeycloakId());
+                existingUser = userRepository.save(existingUser);
+            }
+            return mapToResponse(existingUser);
         }
         User user = new User();
+        user.setKeycloakId(request.getKeycloakId());
         user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
         user.setFirstName(request.getFirstName());
         user.setLastName(request.getLastName());
 
         User savedUser= userRepository.save(user);
-        UserResponse userResponse=new UserResponse();
-        userResponse.setId(savedUser.getId());
-        userResponse.setEmail(savedUser.getEmail());
-        userResponse.setPassword(savedUser.getPassword());
-        userResponse.setFirstName(savedUser.getFirstName());
-        userResponse.setLastName(savedUser.getLastName());
-        userResponse.setCreateAt(savedUser.getCreateAt());
-        userResponse.setUpdatedAt(savedUser.getUpdatedAt());
-        return userResponse;
+        return mapToResponse(savedUser);
     }
 
     public UserResponse getUserProfile(String userId) {
-        User user =userRepository.findById(userId)
-                .orElseThrow(()-> new RuntimeException("user not found"));
+        User user = userRepository.findByKeycloakId(userId);
+        if (user == null) {
+            user = userRepository.findById(userId)
+                    .orElseThrow(() -> new RuntimeException("user not found"));
+        }
+        return mapToResponse(user);
+    }
+
+    public Boolean existByUserId(String userId) {
+        log.info("Calling user service for {}",userId);
+        return userRepository.existsByKeycloakId(userId);
+    }
+
+    private UserResponse mapToResponse(User user) {
         UserResponse userResponse=new UserResponse();
         userResponse.setId(user.getId());
+        userResponse.setKeycloakId(user.getKeycloakId());
         userResponse.setEmail(user.getEmail());
         userResponse.setPassword(user.getPassword());
         userResponse.setFirstName(user.getFirstName());
@@ -46,10 +61,5 @@ public class UserService {
         userResponse.setCreateAt(user.getCreateAt());
         userResponse.setUpdatedAt(user.getUpdatedAt());
         return userResponse;
-    }
-
-    public Boolean existByUserId(String userId) {
-        log.info("Calling user service for {}",userId);
-        return userRepository.existsById(userId);
     }
 }
